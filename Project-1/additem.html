@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--Joshua Head
+	MIU 1211
+	Project 1
+	 -->
+<html>
+<head>
+<title>Dial4dough</title>
+<meta http-equiv="Content-type" content="text/html charset=utf-8">
+<meta name=" description" content="Dial4dough">
+<meta name=" keywords" content="">
+<meta name=" robots" content="">
+<meta http-equiv="Content-type" content="text/html charset=utf-8">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="style" charset="utf-8">
+<!-- This web app is designed for the user to review advertisements for companies and make an income in the process. The app will have categories in which the user could find an advertisement to review. In the main app the user will have be a member in order earn money.  -->
+</head>
+<header>
+<h1>Sign Up</h1>
+<div id="buttons">
+	<a href="#"	id="clear">Clear Data</a>
+	<a href="#" id="displayLink">Display Data</a>
+	<a href="additem.html" id="addNew" style="display: none">Add New</a>
+	</header>
+	<body>
+	<div id="content">
+		<div id="wrapper">
+			<form method="post" action="#" id="contactForm">
+				<fieldset>
+					<legend>Your Info</legend>
+					<h1>Input your information</h1>
+					<ul	id="errors">
+				</ul>
+				<ul>
+					<li>
+					<li><label for="fname">Firstname</label></li><input type="text" id="fname"></li>
+					<li>
+					<li><label for="lname">Last Name</label></li><input type="text" id="lname" aria-required /></li>
+					<li>
+					<li><label for="uname">username</label></li><input type="text" id="uname" required="required" /></li>
+					<li>
+					<li><label for="pword">Password</label></li><input type="password" id="pword-chk" required="required" /></li>
+					<li>
+					<li><label for="pword">Repeat Password</label></li><input type="password" id="pword-chk" name="pword-chk" required="required"  /></li>
+					
+					<li>Gender
+					<ul>
+						<li><label for="male">Male:</label><input type="radio" name="sex" value="male" id="male" checked />
+						<li><label for="female">Female:</label><input type="radio" name="sex" value="female" id="female" /></li>
+					</ul>
+					</li>
+					<li>
+					
+						<li>
+							<li><label for="email">Your Email Address:</label></li>
+							<li><input type="email" name="emailAdress" id="email" /></li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>What do you like?</legend>
+				<!--<h1>What fits you?</h1>-->
+				<ul id="questions">
+					
+					<li><label for="adType" id="adType">**Choose an AdType**</label></li></label><li id="select">
+					</li>
+					<li>
+						<li><label for="date"> What is your Birth Day?</label></li>
+					<input type="date" value="" name="search" id="date"></li>
+					<li>
+					<label for="freq">How often you watch commercials</label></li>
+					<ul>
+						<li><input type="range" id="freq" max="100%" min="0%" value="50%" name="freq">
+						</li>
+					</ul>
+					<li><label for="address">Home Address</label>
+					<li><textarea id="address"></textarea>
+					</li>
+				</ul>
+			</fieldset>
+			<input id="submit" value="Save Contact" type="submit" required="" name="submit">
+		</form>
+	</div>
+</div>
+</div>
+
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/JSON.js" type="text/javascript"></script>
+</body>
+</html>

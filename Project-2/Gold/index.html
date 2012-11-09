@@ -1,0 +1,135 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Dial4dough</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">	
+
+
+	
+	<!-- StyleSheets under here -->	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="style" charset="utf-8">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>	<div data-role="page" id="home" >		<div data-role="header" data-position="fixed" class="bg-top">		<h1>Dial4Dough</h1>		</div>			<div data-role="content" >	<div id="feature">
+		<a href="#signup" title="signup">
+		<div class="cta-btn">
+		</div>
+		</a>
+	</div>
+	<div id="para">
+		<h4>Earn Advertisement Income</h4>
+		<div id="cat2">
+		<li><label for="uname">username</label></li><input type="text" id="uname" required="required" /></li>
+					<li>
+					<li><label for="pword">Password</label></li><input type="text" id="word" required="required" /></li>
+					<li><a data-role="button" href="#adType" type="submit" required="" name="login">Login</a></li>
+			<li><a href="#signUp">Sign Up Here</a></li>
+		</div>	<br/>	<br/>			</div>	<div id="categories">
+			<ul data-role="listview">			<li data-role="list-divider">Recently Viewed Adds</li>
+				<li><a  href="#">Computers</a></li>
+				<li><a  href="#">Educational</a></li>
+				<li><a  href="#">Music</a></li>
+				<li><a  href="#">Lifestyle</a></li>
+				<li><a  href="#">Parenting</a></li>
+			</ul>
+		</div>		</div>		<div data-role="footer" data-position="fixed" data-id="home">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#signUp">Sign Up Page</a></li>
+			<li><a href="#adPage">Ad's Page</a></li>			<li><a href="../Bronze/index.html">Bronze App</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->	</div>	<div data-role="page" id="signUp" >		<div data-role="header" data-position="fixed" class="bg-top">		<h1>Sign Up</h1>		</div>					<div data-role="content" >					<div id="buttons">
+	<a href="#"	id="clear">Clear Data</a>
+	<a href="#" id="displayLink">Display Data</a>
+	<a href="#" id="addNew" style="display: none">Add New</a></div>	
+	</header>		<div data-role="content">		<h2 id="ms2">All the Data have been entered on the Ad's Page</h2>		<a href="#adPage" id="ms2">Click Here to View Data</a>				</div>			<div id="wrapper">					<form method="post" action="#" id="contactForm">
+				<fieldset>
+					<legend>Your Info</legend>
+					<h1>Input your information</h1>
+					<ul	id="errors">										
+				</ul>
+				
+					<li>
+					<li><label for="fname">Firstname</label></li><input type="text" id="fname"></li>
+					<li>
+					<li><label for="lame">Last Name</label></li><input type="text" id="lame" aria-required /></li>
+					<li>
+					<li><label for="uname">username</label></li><input type="text" id="uname" required="required" /></li>
+					<li>
+					<li><label for="pword">Password</label></li><input type="password" id="pword-chk" required="required" /></li>
+					<li>
+					<li><label for="pword">Repeat Password</label></li><input type="password" id="pword-chk" name="pword-chk" required="required"  /></li>
+					
+					<li>Gender</li>
+					<ul>
+						<li><label for="male">Male:</label><input type="radio" name="sex" value="male" id="male" checked />
+						<li><label for="female">Female:</label><input type="radio" name="sex" value="female" id="female" /></li>
+					</ul>
+						</li>
+					<li>
+					
+						<li>
+							<li><label for="email">Your Email Address:</label></li>
+							<li><input type="email" name="emailAdress" id="email" /></li>							</li>							</li>
+				</ul>				
+			</fieldset>
+			<fieldset>
+				<legend>What do you like?</legend>
+				<!--<h1>What fits you?</h1>-->
+				<ul id="questions">
+					
+					<li><label for="adType" id="adType">**Choose an AdType**</label></li>					<li id="select">
+					</li>
+					<li>
+						<li><label for="date"> What is your Birth Day?</label></li>
+					<input type="date" value="" name="search" id="date"></li>
+					<li>
+					<label for="freq">How often you watch commercials</label></li>
+					<ul>
+						<li><input type="range" id="freq" max="100%" min="0%" value="50%" name="freq">
+						</li>
+					</ul>
+					<li><label for="address">Home Address</label></li>
+					<li><textarea id="address"></textarea>
+					</li>
+				</ul>
+			</fieldset>
+			<input id="submit" value="Save Contact" type="submit" required="" name="submit">
+		</form>			</div>				</div><!-- conent   -->			<div data-role="footer" data-position="fixed" data-id="home">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#signUp">Sign Up Page</a></li>
+			<li><a href="#adPage">Ad's Page</a></li>			<li><a href="../Bronze/index.html">Bronze App</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->	</div>		<div data-role="page" id="adPage">				<div data-role="header" data-position="fixed">		<h1>Ad Type/ Users</h1>		</div>		<div data-role="content" >			<ul id="data-1" data-filter="true"> </ul>	<h2 id="ms1">There are no records to review. </h2>		<!-- Content   -->								</div>		<div data-role="footer" data-position="fixed" data-id="home">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#signUp">Sign Up Page</a></li>
+			<li><a href="#adPage">Ad's Page</a></li>			<li><a href="/Bronze/index.html">Bronze App</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /footer -->			</div>		</div>
+	
+	
+
+	<!-- JavaScript under here -->
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script><script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>	<script src="js/JSON.js" type="text/javascript"></script>		         <script src="js/main.js" type="text/javascript"></script></body>
+</html>
