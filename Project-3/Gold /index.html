@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Mobile IE needs ClearType for smoothing fonts -->
         <meta http-equiv="cleartype" content="on">
-        <!-- StyleSheets under here -->
+        <!-- StyleSheets under here -->        <link rel="stylesheet" href="themes/j30.min.css" />
         <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"
         title="style" charset="utf-8">
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"
@@ -20,10 +20,10 @@
     </head>
     
     <body>
-        <div data-role="page" id="home">
-            <div data-role="header" data-position="fixed" class="bg-top">
-                	<h1>Dial4Dough</h1>
-
+        <div data-role="page" id="home" >
+            <div data-role="header" data-position="fixed" class="bg-top" data-theme="b">            	<div id="head1">            	            	<h1>Dial4Dough</h1>
+				</div>
+                	
             </div>
             <div data-role="content">
                 <div id="feature">	<a href="#signup" title="signup">
@@ -60,25 +60,25 @@
                         <li data-role="list-divider">Recently Viewed Adds</li>
                         <li><a id="computers" href="#adPages">Computers</a>
                         </li>
-                        <li><a href="#">Educational</a>
+                        <li><a id="educational" href="#adPages">Educational</a>
                         </li>
-                        <li><a href="#">Music</a>
+                        <li><a id="music" href="#adPages">Music</a>
                         </li>
-                        <li><a href="#">Lifestyle</a>
+                        <li><a id="lifestyles" href="#adPages">Lifestyle</a>
                         </li>
-                        <li><a href="#">Parenting</a>
+                        <li><a id="parenting" href="#adPages">Parenting</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div data-role="footer" data-position="fixed" data-id="home">
-                <div data-role="navbar">
+            <div data-role="footer" data-position="fixed" data-theme="b" id="home">
+                <div data-role="navbar"  data-iconpos="bottom">
                     <ul>
-                        <li><a href="#home">Home</a>
+                        <li><a href="#home" data-role="button" data-icon="home">Home</a>
                         </li>
-                        <li><a href="#signUp">Sign Up Page</a>
+                        <li><a href="#signUp" data-role="button" data-icon="info">Sign Up Page</a>
                         </li>
-                        <li><a href="../Bronze/index.html">Bronze App</a>
+                        <li><a href="../bronze/index.html" data-role="button" data-icon="alert">Bronze App</a>
                         </li>
                     </ul>
                 </div>
@@ -86,8 +86,8 @@
             </div>
             <!-- /footer -->
         </div>
-        <div data-role="page" id="signUp">
-            <div data-role="header" data-position="fixed" class="bg-top">
+        <div data-role="page" id="signUp" >
+            <div data-role="header" data-position="fixed" class="bg-top" data-theme="b" >
                 	<h1>Sign Up</h1
 		
 		>
@@ -98,7 +98,7 @@
 		<div data-role="content">
 		
 		
-					<form action="" method="post" action="#" id="contactForm" >
+					<form action="index.htm" method="post" id="contactForm" >
 				
 			<div data-role="fieldcontain">
 			
@@ -152,7 +152,7 @@
 			
 				<div data-role="fieldcontain">
 				<label for="freq">What percentage of time do you want watch commercials</label>
-				<input type="range" id="freq" max="100" min="0" value="50" name="freq"									data-highlight="true" >
+				<input type="range" id="freq" max="100" min="0" value="50" name="freq"									class="required"  >
 					
 				</div>
 					<div data-role="fieldcontain">
@@ -161,7 +161,7 @@
 					<textarea id="address"></textarea>
 					</div>
 		<div data-role="fieldcontain">
-			<input id="submit" value="Save Contact" type="submit"  name="submit" data-theme="b"  />
+			<input id="submit" value="Save Contact" type="submit"  name="submit" data-theme="b" />
 			</br>
 			<input value="Reset" type="reset"  name="reset" id="reset" data-theme="a" />
 			
@@ -171,22 +171,26 @@
 			</div>
 
 			
-	<div data-role="footer" data-position="fixed" data-id="home">		
-	<div data-role="navbar">
-		<ul>
-			<li><a href="#home">Home</a></li>
-			<li><a href="#adPages">Ad's Page</a></li>
-			<li><a href="../Bronze/index.html">Bronze App</a></li>
-		</ul>
-	</div><!-- /navbar -->
-</div><!-- /footer -->
+	<div data-role="footer" data-position="fixed" data-theme="b" id="home">
+                <div data-role="navbar"  data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#home" data-role="button" data-icon="home">Home</a>
+                        </li>
+                        <li><a href="#adPages" data-role="button" data-icon="info">Ad Pages</a>
+                        </li>
+                        <li><a href="../bronze/index.html" data-role="button" data-icon="alert">Bronze App</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div><!-- /footer -->
 	</div>
 	</div>
-	<div data-role="page" id="adPages">
+	<div data-role="page" id="adPages" >
 	
 	
 	
-	<div data-role="header" data-position="fixed">
+	<div data-role="header" data-position="fixed"  data-theme="b">
 		<h1>Ad Type/ Users</h1>		<div id="buttons">
 	<a href="#"	id="clear">Clear Data</a>
 	<a href="#" id="displayLink">Display Data</a>
@@ -199,14 +203,14 @@
 
                 <!-- Content -->
             </div>
-            <div data-role="footer" data-position="fixed" data-id="home">
-                <div data-role="navbar">
+            <div data-role="footer" data-position="fixed" data-theme="b" id="home">
+                <div data-role="navbar"  data-iconpos="bottom">
                     <ul>
-                        <li><a href="#home">Home</a>
+                        <li><a href="#home" data-role="button" data-icon="home">Home</a>
                         </li>
-                        <li><a href="#signUp">Sign Up Page</a>
+                        <li><a href="#Profile" data-role="button" data-icon="info">Sign Up Page</a>
                         </li>
-                        <li><a href="/Bronze/index.html">Bronze App</a>
+                        <li><a href="../bronze/index.html" data-role="button" data-icon="alert">Bronze App</a>
                         </li>
                     </ul>
                 </div>
@@ -215,7 +219,7 @@
             <!-- /footer -->
         </div>
         </div>
-        <!-- JavaScript under here -->
+        <!-- JavaScript under here -->        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
         <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
         <script src="js/libs/jquery.validate.min.js" type="text/javascript"></script>
