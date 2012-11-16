@@ -67,8 +67,11 @@ textarea {
     resize: inherit;
     width: 100%;
 }
-#head1{
-	background-image: url(../images/header.png);	height: 41px;	
+#head1 {
+    background-image: url("../images/header.png");
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }#feature {
     background-attachment: scroll;
     //background-clip: border-box;

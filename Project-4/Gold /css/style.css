@@ -67,7 +67,12 @@ textarea {
     resize: inherit;
     width: 100%;
 }
-#feature {
+#head1 {
+    background-image: url("../images/header.png");
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}#feature {
     background-attachment: scroll;
     //background-clip: border-box;
     background-color: white;
@@ -75,9 +80,9 @@ textarea {
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 600px;
+    height: 200px;
     margin: 0 auto;
-    width: 100%;    padding-right:25px ;
+    width: 100%;    border-style: dashed;    border-color: red;    border-width: 2px;    //padding-right:25px ;
 }.link{
 	color: black;	font-size: 36px;
 }.link a {
@@ -97,4 +102,13 @@ textarea {
 }select {
     font-size: 80%;
     text-align: center;
-}
+}.ui-content{color: blue;background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #dbf043 51%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(51%,#dbf043)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ffffff 0%,#dbf043 51%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ffffff 0%,#dbf043 51%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ffffff 0%,#dbf043 51%); /* IE10+ */
+background: linear-gradient(to bottom, #ffffff 0%,#dbf043 51%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbf043',GradientType=0 ); /* IE6-9 */
+		
+}

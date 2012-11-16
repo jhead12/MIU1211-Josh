@@ -1,8 +1,5 @@
 $('#home').on('pageinit', function(){
-	$.mobile.changePage( "#adPages", {
-	type: "post",
-	data: $("#computers").serialize()
-});
+
 });	$('#adPages').on('pageinit', function(){	$('#displayLink').click(getData);		$('#clear').click(clearLocal);		$('ul.liData').listview('refresh');						
 	//code needed for home page goes here
 });	
@@ -14,7 +11,7 @@ $('#signUp').on('pageinit', function(){
 			},
 			submitHandler: function() {			
 		var data = myForm.serializeArray();
-			storeData(data);									}							
+			storeData(data);							}										
 	});
 					//Set link & Submit //var displayLink = $('#displayLink').click(getData);//var clearLink = $('#clear').click(clearLocal);//
 		
@@ -25,7 +22,7 @@ $('#signUp').on('pageinit', function(){
 
 
 
-var getData = function(){		toggleControls("on");		if(localStorage.length === 0){			alert("There is no data in Local Storage so using default");						autoFillData();		}				//Write Data from Local Storage to the browser		//var makeDiv = document.createElement('div');		var makeList = document.createElement('ul');		makeList.setAttribute("class","liData");		makeList.setAttribute("data-filter", "true");		//makeDiv.appendChild(makeList);		$('#data-1').append(makeList);		//$('items').style.display= "display";		for (var i = 0, len = localStorage.length; i <len; i++)		 {			var makeli = document.createElement('li');			var linksLi = document.createElement('li')			makeList.appendChild(makeli);			var key = localStorage.key(i);			var value = localStorage.getItem(key);			//Convert the string from local storage value back to an object using JSON			var obj = JSON.parse(value);			var makeSubList = document.createElement('ul');			makeli.appendChild(makeSubList);			getImage(obj.adType[1], makeSubList);			for( var n in obj){				var makeSubli = document.createElement('li');				makeSubList.appendChild(makeSubli);				var optSubText = obj[n][0]+" "+obj[n][1];				makeSubli.innerHTML = optSubText;				makeSubList.appendChild(linksLi);						}								makeItemLinks(localStorage.key(i), linksLi); //create our edit and Delete buttons for each item in local storage		}		};
+var getData = function(){		toggleControls("on");		if(localStorage.length === 0){			alert("There is no data in Local Storage so using default");						autoFillData();		}				//Write Data from Local Storage to the browser		//var makeDiv = document.createElement('div');		var makeList = document.createElement('ul');		makeList.setAttribute("data-role","listview");		//makeList.setAttribute("data-role", "listview");		//makeDiv.appendChild(makeList);		$('#data-1').append(makeList);		//$('items').style.display= "display";		for (var i = 0, len = localStorage.length; i <len; i++)		 {			var makeli = document.createElement('div');			var linksLi = document.createElement('li')			makeList.appendChild(makeli);			var key = localStorage.key(i);			var value = localStorage.getItem(key);			//Convert the string from local storage value back to an object using JSON			var obj = JSON.parse(value);			var makeSubList = document.createElement('a');			makeSubList.setAttribute("href", key + ".htm")			makeli.appendChild(makeSubList);			getImage(obj.adType[1], makeSubList);			for( var n in obj){				var makeSubli = document.createElement('li');				makeSubList.appendChild(makeSubli);				var optSubText = obj[n][0]+" "+obj[n][1];				makeSubli.innerHTML = optSubText;				makeSubList.appendChild(linksLi);						}								makeItemLinks(localStorage.key(i), linksLi); //create our edit and Delete buttons for each item in local storage		}		};
 
 var storeData = function(key){	if(!key){	console.log("StoreData");		var id = Math.floor(Math.random()*10001);		}else{			id = key;	}		getSelectedRadio();		var item 				= {};						item.fname			= ["First Name:", $('#fname').val()];			item.lname			= ["Last Name:", $('#lname').val()];			item.uname			= ["User Name:", $('#uname').val()];			item.pword			= ["Password:", $('#pword-chk').val()];			item.sex			= ["sex:", sexValue];			item.email			= ["Email:", $('#email').val()];			item.adType			= ["Ad Type:", $('#AdType').val()];			item.freq			= ["freq:", $('#freq').val()];			item.date			= ["Date:",$('#date').val()];			item.address		= ["Home Address:", $('#address').val()];		//Save data into Local Storage: Use Stringify to convert our object to a string.		localStorage.setItem(id, JSON.stringify(item));		alert("Your Contact has been entered");			
 	
